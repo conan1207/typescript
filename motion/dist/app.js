@@ -1,6 +1,7 @@
 import { ImageComponent } from './components/page/item/image.js';
 import { NoteComponent } from './components/page/item/note.js';
 import { TodoComponent } from './components/page/item/todo.js';
+import { VideoComponent } from './components/page/item/video.js';
 import { PageComponent } from './components/page/page.js';
 class App {
     constructor(appRoot) {
@@ -12,6 +13,8 @@ class App {
         note.attachTo(appRoot, 'beforeend');
         const todo = new TodoComponent('Todo List', '잠 잘 자기');
         todo.attachTo(appRoot, 'beforeend');
+        const video = new VideoComponent('Video Title', 'https://youtu.be/4bus7zF6K-Y');
+        video.attachTo(appRoot, 'beforeend');
     }
 }
 new App(document.querySelector('.document'));
