@@ -8,13 +8,13 @@ class App {
         this.page = new PageComponent();
         this.page.attachTo(appRoot);
         const image = new ImageComponent('Image Title?', 'https://picsum.photos/600/300');
-        image.attachTo(appRoot, 'beforeend');
+        this.page.addChild(image);
         const note = new NoteComponent("Today's Diary", '잘 지내는 지 걱정 된다. 생각하지 않으려는 순간이 내겐 더 고통스러워.');
-        note.attachTo(appRoot, 'beforeend');
+        this.page.addChild(note);
         const todo = new TodoComponent('Todo List', '잠 잘 자기');
-        todo.attachTo(appRoot, 'beforeend');
+        this.page.addChild(todo);
         const video = new VideoComponent('Video Title', 'https://youtu.be/4bus7zF6K-Y');
-        video.attachTo(appRoot, 'beforeend');
+        this.page.addChild(video);
     }
 }
 new App(document.querySelector('.document'));
